@@ -1,0 +1,26 @@
+{
+  "name": "axe-ecosystem",
+  "version": "2.4.0",
+  "description": "Full-stack real-time communication platform for Axe Ecosystem",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "keywords": [
+    "axe",
+    "websocket",
+    "webrtc",
+    "realtime",
+    "express"
+  ],
+  "author": "alihan_rombit",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.19.2",
+    "ws": "^8.17.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
