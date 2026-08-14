@@ -18,7 +18,9 @@ jobs:
           node-version: '20'
 
       - name: Install ALL dependencies
-        run: npm install socket.io express multer cors dotenv
+        run: |
+          npm install socket.io express multer cors dotenv bcryptjs jsonwebtoken mongoose
+          npm install
 
       - name: Run Server
         run: node server.js
