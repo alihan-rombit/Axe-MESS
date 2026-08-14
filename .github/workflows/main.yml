@@ -1,7 +1,10 @@
-name: Run Node Server
+name: Run Server 24-7
 
 on:
-  workflow_dispatch:
+  schedule:
+    # Автоматически перезапускать каждые 5 часов, чтобы GitHub не отключал сервер
+    - cron: '0 */5 * * *'
+  workflow_dispatch: # Возможность запустить вручную
 
 jobs:
   run-server:
