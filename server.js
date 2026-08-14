@@ -17,10 +17,13 @@ const io = new Server(server, {
 const PORT = process.env.PORT || 3000;
 
 const uploadsDir = path.join(__dirname, 'public', 'uploads');
-if (!fs.existsSync(uploadsDir)) {
-    fs.mkdirSync(uploadsDir, { recursive: true });
+try {
+    if (!fs.existsSync(uploadsDir)) {
+        fs.mkdirSync(uploadsDir, { recursive: true });
+    }
+} catch (err) {
+    console.log('Папка уже существует или создана:', err.message);
 }
-
 const storage = multer.diskStorage({
     destination: (req, file, cb) => cb(null, uploadsDir),
     filename: (req, file, cb) => {
