@@ -18,10 +18,7 @@ jobs:
           node-version: '20'
 
       - name: Install dependencies
-        run: |
-          if [ -f package.json ]; then
-            npm install
-          fi
+        run: npm install socket.io express
 
       - name: Run Server
         run: node server.js
